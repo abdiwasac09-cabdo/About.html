@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Somaliland 18 May 2026</title>
+
+<style>
+
+/* =========================
+RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f5f5f5;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,.85);
+  padding:18px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+.logo{
+  color:white;
+  font-size:28px;
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:18px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#00ff99;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+  height:100vh;
+  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKWBHI8I_JgBSRvkJNf-J53HWVwhu7yPw4Qg&s');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:white;
+  animation:fade 2s ease;
+}
+
+.hero-content h1{
+  font-size:90px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:30px;
+  margin-bottom:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:16px 40px;
+  background:#00aa55;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-size:20px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#00ff99;
+  color:black;
+  transform:scale(1.05);
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.section{
+  padding:100px 60px;
+}
+
+.title{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:50px;
+  color:#111;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card h2{
+  margin-bottom:15px;
+  color:#00aa55;
+}
+
+/* =========================
+GALLERY
+========================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:150%;
+  height:320px;
+  object-fit:cover;
+  border-radius:30px;
+  transition:.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* =========================
+PORTAL
+========================= */
+
+.portal{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.portal-box{
+  background:#111;
+  color:white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  transition:.4s;
+}
+
+.portal-box:hover{
+  background:#00aa55;
+  transform:translateY(-10px);
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact-form{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:18px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:17px;
+}
+
+.contact-form button{
+  padding:18px;
+  background:#00aa55;
+  border:none;
+  color:white;
+  font-size:18px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  background:#008844;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:50px;
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+  }
+
+  .hero-content h1{
+    font-size:50px;
+  }
+
+  .hero-content p{
+    font-size:22px;
+  }
+
+  .section{
+    padding:80px 20px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+  <div class="logo">
+       SOMALILAND 
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Photos</a>
+    <a href="#portal">Portal</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+<!-- =========================
+HOME
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>18 MAY 2026</h1>
+
+    <p>
+      Dabaal-degga Qaranka Somaliland
+    </p>
+
+    <a href="#gallery" class="btn">
+      Daawo Sawirrada
+    </a>
+
+  </div>
+
+</section>
+
+<!-- =========================
+ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+  <h1 class="title">Taariikhda Somaliland</h1>
+
+  <div class="cards">
+
+    <div class="card">
+      <h2>🏛 Xorriyadda</h2>
+      <p>
+        18 May waa maalinta Somaliland dib ula soo noqotay xorriyaddeeda.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🎉 Dabaal-deg</h2>
+      <p>
+        Dadka Somaliland waxay sanad kasta sameeyaan dabaal-deg weyn.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌍 Midnimo</h2>
+      <p>
+        Bulshada Somaliland meel kasta oo ay joogaan way u dabaal-degaan.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+GALLERY
+========================= -->
+
+<section class="section" id="gallery">
+
+  <h1 class="title">18 MAY PHOTOS</h1>
+
+  <div class="gallery">
+
+    <img src="https://www.shutterstock.com/shutterstock/photos/2695184057/display_1500/stock-photo-somaliland-flag-colors-d-illustration-balloon-numbers-d-rendering-on-gray-background-premium-2695184057.jpg"> 
+
+    <img src="https://www.horndiplomat.com/wp-content/uploads/2025/05/h.jpg">
+
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/022/922/382/small/somaliland-independence-day-celebration-card-happy-somaliland-s-national-day-18th-may-flag-of-somaliland-design-illustration-vector.jpg">
+
+    <img src="https://pbs.twimg.com/media/HHEXxeAbQAElHJm.jpg">
+
+    <img src="https://www.hiiraan.com/2024/images/may/2024518638516001379866084.jpg">
+
+    <img src="https://i0.wp.com/saxafimedia.com/wp-content/uploads/2025/05/Somaliland_34th_Anniversary_00_20250517.jpg">
+
+  </div>
+
+</section>
+
+<!-- =========================
+PORTAL
+========================= -->
+
+<section class="section" id="portal">
+
+  <h1 class="title">Somaliland Portal</h1>
+
+  <div class="portal">
+
+    <div class="portal-box">
+      <h2>🎶 Music</h2>
+      <p>Heesaha waddaniga ah.</p>
+    </div>
+
+    <div class="portal-box">
+      <h2>📷 Media</h2>
+      <p>Sawirrada dabaal-degga.</p>
+    </div>
+
+    <div class="portal-box">
+      <h2>🏛 History</h2>
+      <p>Taariikhda Somaliland.</p>
+    </div>
+
+    <div class="portal-box">
+      <h2>🌎 Community</h2>
+      <p>Bulshada Somaliland.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+CONTACT
+========================= -->
+
+<section class="section" id="contact">
+
+  <h1 class="title">Nala Soo Xidhiidh</h1>
+
+  <form class="contact-form">
+
+    <input type="text" placeholder="Magacaaga">
+
+    <input type="email" placeholder="Email-kaaga">
+
+    <textarea rows="6" placeholder="Fariintaada"></textarea>
+
+    <button type="submit">
+      Dir Fariin
+    </button>
+
+  </form>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+  <p>
+    © Somaliland 18 May 2026
+  </p>
+
+</footer>
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
+<script>
+
+/* NAVBAR EFFECT */
+
+window.addEventListener("scroll", function(){
+
+  const header = document.querySelector("header");
+
+  if(window.scrollY > 50){
+
+    header.style.background = "#000";
+
+  }else{
+
+    header.style.background = "rgba(0,0,0,.85)";
+
+  }
+
+});
+
+/* AUTO IMAGE EFFECT */
+
+const images = document.querySelectorAll(".gallery img");
+
+images.forEach((img,index)=>{
+
+  img.style.animation = `fade 1s ease ${index / 2}s forwards`;
+
+});
+
+/* CONTACT MESSAGE */
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  alert("Mahadsanid! Fariintaada waa la diray.");
+
+});
+
+</script>
+
+</body>
+</html>
